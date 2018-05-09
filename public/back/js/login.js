@@ -126,7 +126,15 @@ $(function() {
     // resetForm 不传 true, 只重置校验状态
     // 传 true, 不仅重置校验状态, 而且重置 内容
     $('#form').data("bootstrapValidator").resetForm( true );
-
   })
+
+  /*
+  * git add .
+  * git commit -m "登录完成"
+  *
+  * git checkout master
+  * git merge login
+  * git branch -d login
+  * */
 
 })
