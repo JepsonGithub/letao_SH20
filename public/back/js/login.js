@@ -91,7 +91,7 @@ $(function() {
         // 根据响应回来的数据, 进行判断
         console.log( info );
         if ( info.success ) {
-          alert("登录成功")
+          //alert("登录成功")
           location.href = "index.html";
         }
 
