@@ -32,6 +32,25 @@ $(document).ajaxStop(function() {
 });
 
 
+$(function() {
+
+  // 1. 公共的二级菜单切换功能
+  $('.category').click(function() {
+    $('.lt_aside .child').stop().slideToggle();
+  });
+
+
+  // 2. 点击菜单按钮, 进行切换菜单
+  $('.icon_menu').click(function() {
+    $('.lt_aside').toggleClass("hidemenu");
+    // 当菜单隐藏时, lt_topbar, lt_main 都不需要 padding-left 了
+    $('.lt_topbar').toggleClass("hidemenu");
+    $('.lt_main').toggleClass("hidemenu");
+  })
+
+})
+
+
 
 
 
