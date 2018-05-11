@@ -131,8 +131,38 @@
         </div>
         <div class="modal-body">
 
+          <!-- 请选择一级分类 -->
           <div class="form-group">
-            <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                <span id="dropdownText">请选择一级分类</span>
+                <span class="caret"></span>
+              </button>
+
+              <ul class="dropdown-menu">
+                <!-- 挖个坑 -->
+              </ul>
+            </div>
+  
+            <input type="hidden" name="categoryId">
+            <input type="hidden" name="hot" value="1">
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
+          </div>
+
+          <div class="form-group">
+            <label class="btn btn-default" for="fileupload">上传图片</label>
+            <!-- name 用于将来后台接收图片数据, 指定的name必须和接口中相符
+                 data-url 用于指定后台提供的图片上传接口
+            -->
+            <input type="file" id="fileupload" name="pic1" data-url="/category/addSecondCategoryPic" style="display: none;">
+          </div>
+
+          <div class="form-group" id="imgBox">
+            <img src="./images/none.png" width="100" alt="">
+            <input type="hidden" name="brandLogo">
           </div>
 
         </div>
@@ -159,6 +189,12 @@
   {{ /each }}
 </script>
 
+<script type="text/html" id="dropdownTpl">
+  {{ each rows v i }}
+    <li><a href="#" data-id="{{ v.id }}">{{ v.categoryName }}</a></li>
+  {{ /each }}
+</script>
+
 
 
 <script src="./lib/jquery/jquery.min.js"></script>
@@ -167,6 +203,10 @@
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<!-- 文件上传插件引入 -->
+<script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
+
 <script src="js/common.js"></script>
 <script src="js/second.js"></script>
 
