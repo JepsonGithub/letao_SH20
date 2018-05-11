@@ -32,6 +32,10 @@ ul {
   list-style: none;
 }
 
+.red {
+  color: #A94442;
+}
+
 
 
 /* .lt_aside 开始 */
@@ -106,7 +110,6 @@ ul {
 /* lt_main 开始 */
 .lt_main {
   min-height: 1000px;
-  background-color: pink;
   padding-left: 180px;
   padding-top: 50px;
   transition: all 1s;
@@ -139,6 +142,12 @@ ul {
 }
 .lt_main .breadcrumb {
   margin-top: 20px;
+}
+
+.lt_content .echarts_1,
+.lt_content .echarts_2 {
+  width: 48%;
+  height: 400px;
 }
 
 
