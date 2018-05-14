@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+
+  // arr.push 在数组最后面添加,  返回值是: 新数组的长度
+  // arr.pop  删除数组的最后一项,  返回值是: 删除的那一项
+  // arr.unshift 在数组最前面添加, 返回值是: 新数组的长度
+  // arr.shift 删除数组的最前面一项, 返回值: 删除的那一项
+
+  // arr.join 根据分隔符, 将数组转换成字符串
+
+  // arr.slice(start,end) 用来截取数组的一部分, 不会改变原数组
+  // (1) start 从哪开始, end 到哪结束, 不包括 end
+  // (2) arr.slice( start ) 表示从 start 开始截取到最后
+  // (3) arr.slice() 表示克隆一个数组, 从头到尾复制
+  // (4) arr.slice( start, end ) 如果传负值, 表示倒着数的
+  //     arr.slice( -2 ) 表示截取数组的最后两项
+
+
+
+  // arr.splice(start, num, arg1, arg2, arg3.... )   强调: 会改变原数组
+  // 可以用来 在任意位置 添加或者删除 任意项
+  // start 表示从开始  num 删除多少项 arg1, arg2... 表示添加的项
+
+  var arr = ["张飞", "关羽", "赵云", "马超", "黄忠" ];
+
+  // 1. 添加, 在任意位置 添加任意项
+  // arr.splice( 2, 0, "小乔", "大乔" );
+
+  // 2. 删除, 删除任意索引的那一项, 可以删除多项
+  // arr.splice( 1, 2 );
+
+  // 3. 替换, 替换数组中的任意项
+  arr.splice( 3, 1, "马云" );
+
+  console.log(arr);
+
+
+</script>
+
+</body>
+</html>
