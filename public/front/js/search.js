@@ -70,7 +70,7 @@ $(function() {
 
   $('.lt_history').on("click", ".btn_delete", function() {
 
-    // 暂存外面的 this 
+    // 暂存外面的 this
     var that = this;
     // mui 确认框
     // 内容, 标题, 按钮数组, 回调函数
@@ -144,6 +144,9 @@ $(function() {
 
     // 清空搜索框
     $('.lt_search input').val("");
+
+    // 跳转到搜索列表页, 通过地址栏, 可以进行页面与页面之间的传参
+    location.href = "searchList.html?key=" + key;
 
   })
 

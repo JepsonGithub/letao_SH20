@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<script>
+  // ?name=pp&age=18&desc=帅 说白了, 就是字符串转数组, 再转对象
+
+  function getSearch( key ) {
+    var str = location.search;
+    // 将地址栏参数, 将unicode编码转换成 中文
+    str = decodeURI( str );
+    // 去掉 ?
+    str = str.slice(1);
+    // 根据 & 进行分割
+    var arr = str.split("&");
+
+    var obj = {};
+    // 遍历数组, 将键值对, 存储在对象中
+    // obj["name"] = "pp"
+    arr.forEach(function( element, index ) {
+      var k = element.split("=")[0];  // name
+      var v = element.split("=")[1];  // pp
+      obj[ k ] = v;
+    })
+
+    return obj[ key ];
+  }
+
+  console.log(getSearch("desc"));
+
+
+</script>
+
+
+</body>
+</html>

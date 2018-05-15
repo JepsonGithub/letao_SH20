@@ -1,29 +1,26 @@
-@charset "utf-8";
 
-/* history 开始 */
-.history {
+
+.lt_history {
   padding: 10px;
   font-size: 12px;
+}
+.lt_history .title {
   color: #666;
 }
-.history_title span{
+.lt_history .content ul {
+  border: 1px dashed #FF0000;
+}
+.lt_history .content li{
   height: 30px;
   line-height: 30px;
+  border-bottom: 1px dashed #FF0000;
 }
-.history_content ul{
-  border: 1px dashed red;
-}
-.history_content li {
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
-  border-bottom: 1px dashed red;
-}
-.history_content li:last-child {
+.lt_history .content li:last-child {
   border-bottom: none;
 }
-.history_content li i {
-  height: 30px;
+.lt_history .content li i {
   line-height: 30px;
 }
-/* history 结束 */
+.lt_history .content li a {
+  padding: 0 10px;
+}
